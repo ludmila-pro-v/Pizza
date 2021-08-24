@@ -26,14 +26,24 @@ document.addEventListener('mouseout', stopParallax);
 // tabs
 
 const tabsProducts = document.querySelectorAll('[data-tabs-products]');
+const tabsDishes = document.querySelectorAll('[data-tabs-dish]');
 
 for (const product of tabsProducts) {
   product.addEventListener('click', () => {
+    
     tabsProducts.forEach(item => {
       if (product == item) {
         item.classList.add('products__button-active');
       } else {
         item.classList.remove('products__button-active');
+      }
+    });
+
+    tabsDishes.forEach(dish => {
+      if(dish.dataset.tabsDish === product.dataset.tabsProducts) {
+        dish.classList.remove('hidden');
+      } else {
+        dish.classList.add('hidden');
       }
     });
   });
@@ -45,13 +55,15 @@ const productsAll = document.querySelectorAll('.card__item');
 
 for (const productSelected of productsAll) {
   productSelected.addEventListener('click', () => {
-    let productInBasket = productSelected.querySelector('.card__basket');
-    console.log('productInBasket: ', productInBasket);
-    
+     let productInBasket = productSelected.querySelector('.card__basket');
+     let basketImage = productSelected.querySelector('.card__basket-image');
     productInBasket.classList.toggle('card__basket-active');
+    basketImage.classList.toggle('basket__image-active');
 
   });
 };
+
+
 
 // menu
 

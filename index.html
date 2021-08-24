@@ -20,9 +20,9 @@
       <div class="menu">
         <nav class="menu__nav">
           <ul class="menu__list">
-            <li><a href="#paiment" class="scroll">Payment</a></li>
-            <li><a href="#about" class="scroll">About us</a></li>
-            <li><a href="#contacts" class="scroll">Contacts</a></li>
+            <li class="menu__list-item"><a href="#paiment" class="scroll">Payment</a></li>
+            <li class="menu__list-item"><a href="#about" class="scroll">About us</a></li>
+            <li class="menu__list-item"><a href="#contacts" class="scroll">Contacts</a></li>
           </ul>
         </nav>
 
@@ -31,9 +31,9 @@
         </a>
 
         <div class="menu__contacts">
-          <p>Daily 11am - 9pm</p>
+          <p class="menu__contacts-time">Daily 11am - 9pm</p>
           <a href="tel:+0800330898" class="menu__phone">
-            <img src="img/phone.svg" alt="phone">
+            <img class="menu__phone-image" src="img/phone.svg" alt="phone">
           </a>
           <!-- /.phone -->
           <a class="menu__phone-number" href="tel:+0800330898">0 800 33 08 98</a>
@@ -64,7 +64,7 @@
     </div>
     <div data-speed="30" class="layer image-1"></div>
     <div data-speed="90" class="layer image-3"></div>
-    <h1>Food delivery in Kovel</h1>
+    <h1 class="main__title">Food delivery in Kovel</h1>
     <p class="main__subtitle">
       If you decide to relax or have unexpected guests, call us. We make sure that your vacation is comfortable,
       enjoyable and delicious
@@ -80,7 +80,7 @@
       <div class="products__basket">
         <div class="products__basket-price">= 298 €</div>
         <!-- /.products__basket-price -->
-        <div class="products__basket-image"><img src="img/shopping-bag.svg" alt="bag"></div>
+        <div class="products__basket-wrapper"><img class="products__basket-image" src="img/shopping-bag.svg" alt="bag"></div>
         <!-- /.products__basket-image -->
         <div class="products__basket-number">2</div>
         <!-- /.products__basket-number -->
@@ -88,27 +88,30 @@
       <!-- /.products__basket -->
       <h2>Popular dishes</h2>
       <div class="dishes">
-        <button data-tabs-products="products-1" class="button products__button products__button-active">Pizza</button>
-        <button data-tabs-products="products-2" class="button products__button">Sushi</button>
-        <button data-tabs-products="products-3" class="button products__button">Salad</button>
-        <button data-tabs-products="products-4" class="button products__button">Dessert</button>
-        <button data-tabs-products="products-5" class="button products__button">Drinks</button>
+        <button data-tabs-products="pizza" class="button products__button products__button-active">Pizza</button>
+        <button data-tabs-products="sushi" class="button products__button">Sushi</button>
+        <button data-tabs-products="salad" class="button products__button">Salad</button>
+        <button data-tabs-products="dessert" class="button products__button">Dessert</button>
+        <button data-tabs-products="drinks" class="button products__button">Drinks</button>
       </div>
       <!-- .dishes -->
 
       <div class="card">
-        <div class="card__item">
-          <div class="card__image">
-            <img src="img/cards/pizza-1.png" alt="pizza-1">
+        <div class="card__item" data-tabs-dish="pizza">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/cards/pizza-1.png" alt="pizza-1">
           </div>
-          <div class="card__name">Quattro formaggi</div>
-          <div class="card__size">32cm</div>
+          <div class="card__title">
+            <div class="card__name">Quattro formaggi</div>
+            <div class="card__size">32cm</div>
+
+          </div>
           <div class="card__ingridients">Dough, Mozzarella, Cheddar, Blue, Parmesan</div>
           <div class="card__price">119 UAH</div>
           <!-- .card__price -->
 
           <div class="card__basket">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="card__basket-image" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.2653 3.81981C11.261 3.76283 11.2133 3.71875 11.1562 3.71875H9.73436C9.43232 3.71875 9.18748 3.47391 9.18748 3.17188C9.18748 1.42286 7.76451 0 6.01561 0C4.2667 0 2.84373 1.42286 2.84373 3.17188C2.84373 3.47391 2.59889 3.71875 2.29686 3.71875H0.874985C0.817891 3.71875 0.770204 3.76283 0.765938 3.81981L0.000313585 13.8823C-0.00198329 13.9126 0.00840733 13.9426 0.0291886 13.9649C0.0498604 13.9873 0.0789541 14 0.10936 14H11.9219C11.9523 14 11.9814 13.9873 12.002 13.965C12.0227 13.9427 12.0332 13.9127 12.0309 13.8824L11.2653 3.81981ZM3.71873 3.17188C3.71873 1.90542 4.74905 0.875 6.01561 0.875C7.28217 0.875 8.31248 1.90542 8.31248 3.17188C8.31248 3.47391 8.06764 3.71875 7.76561 3.71875H4.26561C3.96358 3.71875 3.71873 3.47391 3.71873 3.17188ZM3.28123 6.78125C2.67803 6.78125 2.18748 6.29059 2.18748 5.6875C2.18748 5.59414 2.19749 5.50275 2.2175 5.41508C2.3246 4.94593 2.84373 5.20629 2.84373 5.6875C2.84373 5.92878 3.04006 6.125 3.28123 6.125C3.52241 6.125 3.71873 5.92878 3.71873 5.6875C3.71873 5.2066 4.2369 4.9468 4.3447 5.41546C4.36489 5.50321 4.37498 5.59451 4.37498 5.6875C4.37498 6.29059 3.88444 6.78125 3.28123 6.78125ZM8.74998 6.78125C8.14678 6.78125 7.65623 6.29059 7.65623 5.6875C7.65623 5.59414 7.66624 5.50275 7.68625 5.41508C7.79334 4.94593 8.31248 5.20629 8.31248 5.6875C8.31248 5.92878 8.50881 6.125 8.74998 6.125C8.99115 6.125 9.18748 5.92878 9.18748 5.6875C9.18748 5.2066 9.70565 4.9468 9.81345 5.41546C9.83364 5.50321 9.84373 5.59451 9.84373 5.6875C9.84373 6.29059 9.35318 6.78125 8.74998 6.78125Z" />
               <path
@@ -133,18 +136,21 @@
         </div>
         <!-- /.card -->
 
-        <div class="card__item">
-          <div class="card__image">
-            <img src="img/cards/pizza-2.png" alt="pizza-1">
+        <div class="card__item" data-tabs-dish="pizza">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/cards/pizza-2.png" alt="pizza-1">
           </div>
-          <div class="card__name">Карбонара</div>
-          <div class="card__size">32cm</div>
+          <div class="card__title">
+            <div class="card__name">Карбонара</div>
+            <div class="card__size">32cm</div>
+
+          </div>
           <div class="card__ingridients">Dough, Mozzarella, Cheddar, Blue, Parmesan</div>
           <div class="card__price">119 UAH</div>
           <!-- .card__price -->
 
           <div class="card__basket card__basket-active">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="card__basket-image basket__image-active" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.2653 3.81981C11.261 3.76283 11.2133 3.71875 11.1562 3.71875H9.73436C9.43232 3.71875 9.18748 3.47391 9.18748 3.17188C9.18748 1.42286 7.76451 0 6.01561 0C4.2667 0 2.84373 1.42286 2.84373 3.17188C2.84373 3.47391 2.59889 3.71875 2.29686 3.71875H0.874985C0.817891 3.71875 0.770204 3.76283 0.765938 3.81981L0.000313585 13.8823C-0.00198329 13.9126 0.00840733 13.9426 0.0291886 13.9649C0.0498604 13.9873 0.0789541 14 0.10936 14H11.9219C11.9523 14 11.9814 13.9873 12.002 13.965C12.0227 13.9427 12.0332 13.9127 12.0309 13.8824L11.2653 3.81981ZM3.71873 3.17188C3.71873 1.90542 4.74905 0.875 6.01561 0.875C7.28217 0.875 8.31248 1.90542 8.31248 3.17188C8.31248 3.47391 8.06764 3.71875 7.76561 3.71875H4.26561C3.96358 3.71875 3.71873 3.47391 3.71873 3.17188ZM3.28123 6.78125C2.67803 6.78125 2.18748 6.29059 2.18748 5.6875C2.18748 5.59414 2.19749 5.50275 2.2175 5.41508C2.3246 4.94593 2.84373 5.20629 2.84373 5.6875C2.84373 5.92878 3.04006 6.125 3.28123 6.125C3.52241 6.125 3.71873 5.92878 3.71873 5.6875C3.71873 5.2066 4.2369 4.9468 4.3447 5.41546C4.36489 5.50321 4.37498 5.59451 4.37498 5.6875C4.37498 6.29059 3.88444 6.78125 3.28123 6.78125ZM8.74998 6.78125C8.14678 6.78125 7.65623 6.29059 7.65623 5.6875C7.65623 5.59414 7.66624 5.50275 7.68625 5.41508C7.79334 4.94593 8.31248 5.20629 8.31248 5.6875C8.31248 5.92878 8.50881 6.125 8.74998 6.125C8.99115 6.125 9.18748 5.92878 9.18748 5.6875C9.18748 5.2066 9.70565 4.9468 9.81345 5.41546C9.83364 5.50321 9.84373 5.59451 9.84373 5.6875C9.84373 6.29059 9.35318 6.78125 8.74998 6.78125Z" />
               <path
@@ -169,18 +175,22 @@
         </div>
         <!-- /.card -->
 
-        <div class="card__item">
-          <div class="card__image">
-            <img src="img/cards/pizza-3.png" alt="pizza-1">
+        <div class="card__item" data-tabs-dish="pizza">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/cards/pizza-3.png" alt="pizza-1">
           </div>
-          <div class="card__name">Філадельфія селмон</div>
-          <div class="card__size">32cm</div>
+          <div class="card__title">
+            <div class="card__name">Філадельфія селмон</div>
+            <div class="card__size">32cm</div>
+
+          </div>
+          <!-- /.card__title -->
           <div class="card__ingridients">Dough, mozzarella, barrel, eggs, Parmesan cheese</div>
           <div class="card__price">119 UAH</div>
           <!-- .card__price -->
 
           <div class="card__basket">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="card__basket-image" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.2653 3.81981C11.261 3.76283 11.2133 3.71875 11.1562 3.71875H9.73436C9.43232 3.71875 9.18748 3.47391 9.18748 3.17188C9.18748 1.42286 7.76451 0 6.01561 0C4.2667 0 2.84373 1.42286 2.84373 3.17188C2.84373 3.47391 2.59889 3.71875 2.29686 3.71875H0.874985C0.817891 3.71875 0.770204 3.76283 0.765938 3.81981L0.000313585 13.8823C-0.00198329 13.9126 0.00840733 13.9426 0.0291886 13.9649C0.0498604 13.9873 0.0789541 14 0.10936 14H11.9219C11.9523 14 11.9814 13.9873 12.002 13.965C12.0227 13.9427 12.0332 13.9127 12.0309 13.8824L11.2653 3.81981ZM3.71873 3.17188C3.71873 1.90542 4.74905 0.875 6.01561 0.875C7.28217 0.875 8.31248 1.90542 8.31248 3.17188C8.31248 3.47391 8.06764 3.71875 7.76561 3.71875H4.26561C3.96358 3.71875 3.71873 3.47391 3.71873 3.17188ZM3.28123 6.78125C2.67803 6.78125 2.18748 6.29059 2.18748 5.6875C2.18748 5.59414 2.19749 5.50275 2.2175 5.41508C2.3246 4.94593 2.84373 5.20629 2.84373 5.6875C2.84373 5.92878 3.04006 6.125 3.28123 6.125C3.52241 6.125 3.71873 5.92878 3.71873 5.6875C3.71873 5.2066 4.2369 4.9468 4.3447 5.41546C4.36489 5.50321 4.37498 5.59451 4.37498 5.6875C4.37498 6.29059 3.88444 6.78125 3.28123 6.78125ZM8.74998 6.78125C8.14678 6.78125 7.65623 6.29059 7.65623 5.6875C7.65623 5.59414 7.66624 5.50275 7.68625 5.41508C7.79334 4.94593 8.31248 5.20629 8.31248 5.6875C8.31248 5.92878 8.50881 6.125 8.74998 6.125C8.99115 6.125 9.18748 5.92878 9.18748 5.6875C9.18748 5.2066 9.70565 4.9468 9.81345 5.41546C9.83364 5.50321 9.84373 5.59451 9.84373 5.6875C9.84373 6.29059 9.35318 6.78125 8.74998 6.78125Z" />
               <path
@@ -205,18 +215,22 @@
         </div>
         <!-- /.card -->
 
-        <div class="card__item">
-          <div class="card__image">
-            <img src="img/cards/pizza-4.png" alt="pizza-1">
+        <div class="card__item" data-tabs-dish="pizza">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/cards/pizza-4.png" alt="pizza-1">
           </div>
-          <div class="card__name">Ді маре</div>
-          <div class="card__size">32cm</div>
+          <div class="card__title">
+            <div class="card__name">Ді маре</div>
+            <div class="card__size">32cm</div>
+
+          </div>
+          <!-- /.card__title -->
           <div class="card__ingridients">Dough, mozzarella, barrel, eggs, Parmesan cheese</div>
           <div class="card__price">119 UAH</div>
           <!-- .card__price -->
 
           <div class="card__basket">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="card__basket-image" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.2653 3.81981C11.261 3.76283 11.2133 3.71875 11.1562 3.71875H9.73436C9.43232 3.71875 9.18748 3.47391 9.18748 3.17188C9.18748 1.42286 7.76451 0 6.01561 0C4.2667 0 2.84373 1.42286 2.84373 3.17188C2.84373 3.47391 2.59889 3.71875 2.29686 3.71875H0.874985C0.817891 3.71875 0.770204 3.76283 0.765938 3.81981L0.000313585 13.8823C-0.00198329 13.9126 0.00840733 13.9426 0.0291886 13.9649C0.0498604 13.9873 0.0789541 14 0.10936 14H11.9219C11.9523 14 11.9814 13.9873 12.002 13.965C12.0227 13.9427 12.0332 13.9127 12.0309 13.8824L11.2653 3.81981ZM3.71873 3.17188C3.71873 1.90542 4.74905 0.875 6.01561 0.875C7.28217 0.875 8.31248 1.90542 8.31248 3.17188C8.31248 3.47391 8.06764 3.71875 7.76561 3.71875H4.26561C3.96358 3.71875 3.71873 3.47391 3.71873 3.17188ZM3.28123 6.78125C2.67803 6.78125 2.18748 6.29059 2.18748 5.6875C2.18748 5.59414 2.19749 5.50275 2.2175 5.41508C2.3246 4.94593 2.84373 5.20629 2.84373 5.6875C2.84373 5.92878 3.04006 6.125 3.28123 6.125C3.52241 6.125 3.71873 5.92878 3.71873 5.6875C3.71873 5.2066 4.2369 4.9468 4.3447 5.41546C4.36489 5.50321 4.37498 5.59451 4.37498 5.6875C4.37498 6.29059 3.88444 6.78125 3.28123 6.78125ZM8.74998 6.78125C8.14678 6.78125 7.65623 6.29059 7.65623 5.6875C7.65623 5.59414 7.66624 5.50275 7.68625 5.41508C7.79334 4.94593 8.31248 5.20629 8.31248 5.6875C8.31248 5.92878 8.50881 6.125 8.74998 6.125C8.99115 6.125 9.18748 5.92878 9.18748 5.6875C9.18748 5.2066 9.70565 4.9468 9.81345 5.41546C9.83364 5.50321 9.84373 5.59451 9.84373 5.6875C9.84373 6.29059 9.35318 6.78125 8.74998 6.78125Z" />
               <path
@@ -241,18 +255,22 @@
         </div>
         <!-- /.card -->
 
-        <div class="card__item">
-          <div class="card__image">
-            <img src="img/cards/pizza-5.png" alt="pizza-1">
+        <div class="card__item" data-tabs-dish="pizza">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/cards/pizza-5.png" alt="pizza-1">
           </div>
-          <div class="card__name">Кватро формаджіо</div>
-          <div class="card__size">32cm</div>
+          <div class="card__title">
+            <div class="card__name">Кватро формаджіо</div>
+            <div class="card__size">32cm</div>
+
+          </div>
+          <!-- /.card__title -->
           <div class="card__ingridients">Dough, Mozzarella, Cheddar, Blue, Parmesan</div>
           <div class="card__price">119 UAH</div>
           <!-- .card__price -->
 
           <div class="card__basket">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="card__basket-image" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.2653 3.81981C11.261 3.76283 11.2133 3.71875 11.1562 3.71875H9.73436C9.43232 3.71875 9.18748 3.47391 9.18748 3.17188C9.18748 1.42286 7.76451 0 6.01561 0C4.2667 0 2.84373 1.42286 2.84373 3.17188C2.84373 3.47391 2.59889 3.71875 2.29686 3.71875H0.874985C0.817891 3.71875 0.770204 3.76283 0.765938 3.81981L0.000313585 13.8823C-0.00198329 13.9126 0.00840733 13.9426 0.0291886 13.9649C0.0498604 13.9873 0.0789541 14 0.10936 14H11.9219C11.9523 14 11.9814 13.9873 12.002 13.965C12.0227 13.9427 12.0332 13.9127 12.0309 13.8824L11.2653 3.81981ZM3.71873 3.17188C3.71873 1.90542 4.74905 0.875 6.01561 0.875C7.28217 0.875 8.31248 1.90542 8.31248 3.17188C8.31248 3.47391 8.06764 3.71875 7.76561 3.71875H4.26561C3.96358 3.71875 3.71873 3.47391 3.71873 3.17188ZM3.28123 6.78125C2.67803 6.78125 2.18748 6.29059 2.18748 5.6875C2.18748 5.59414 2.19749 5.50275 2.2175 5.41508C2.3246 4.94593 2.84373 5.20629 2.84373 5.6875C2.84373 5.92878 3.04006 6.125 3.28123 6.125C3.52241 6.125 3.71873 5.92878 3.71873 5.6875C3.71873 5.2066 4.2369 4.9468 4.3447 5.41546C4.36489 5.50321 4.37498 5.59451 4.37498 5.6875C4.37498 6.29059 3.88444 6.78125 3.28123 6.78125ZM8.74998 6.78125C8.14678 6.78125 7.65623 6.29059 7.65623 5.6875C7.65623 5.59414 7.66624 5.50275 7.68625 5.41508C7.79334 4.94593 8.31248 5.20629 8.31248 5.6875C8.31248 5.92878 8.50881 6.125 8.74998 6.125C8.99115 6.125 9.18748 5.92878 9.18748 5.6875C9.18748 5.2066 9.70565 4.9468 9.81345 5.41546C9.83364 5.50321 9.84373 5.59451 9.84373 5.6875C9.84373 6.29059 9.35318 6.78125 8.74998 6.78125Z" />
               <path
@@ -277,18 +295,22 @@
         </div>
         <!-- /.card -->
 
-        <div class="card__item">
-          <div class="card__image">
-            <img src="img/cards/pizza-6.png" alt="pizza-6">
+        <div class="card__item" data-tabs-dish="pizza">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/cards/pizza-6.png" alt="pizza-6">
           </div>
-          <div class="card__name">Кватро формаджіо</div>
-          <div class="card__size">32cm</div>
+          <div class="card__title">
+            <div class="card__name">Кватро формаджіо</div>
+            <div class="card__size">32cm</div>
+
+          </div>
+          <!-- /.card__title -->
           <div class="card__ingridients">Dough, Mozzarella, Cheddar, Blue, Parmesan</div>
           <div class="card__price">119 UAH</div>
           <!-- .card__price -->
 
           <div class="card__basket">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="card__basket-image" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.2653 3.81981C11.261 3.76283 11.2133 3.71875 11.1562 3.71875H9.73436C9.43232 3.71875 9.18748 3.47391 9.18748 3.17188C9.18748 1.42286 7.76451 0 6.01561 0C4.2667 0 2.84373 1.42286 2.84373 3.17188C2.84373 3.47391 2.59889 3.71875 2.29686 3.71875H0.874985C0.817891 3.71875 0.770204 3.76283 0.765938 3.81981L0.000313585 13.8823C-0.00198329 13.9126 0.00840733 13.9426 0.0291886 13.9649C0.0498604 13.9873 0.0789541 14 0.10936 14H11.9219C11.9523 14 11.9814 13.9873 12.002 13.965C12.0227 13.9427 12.0332 13.9127 12.0309 13.8824L11.2653 3.81981ZM3.71873 3.17188C3.71873 1.90542 4.74905 0.875 6.01561 0.875C7.28217 0.875 8.31248 1.90542 8.31248 3.17188C8.31248 3.47391 8.06764 3.71875 7.76561 3.71875H4.26561C3.96358 3.71875 3.71873 3.47391 3.71873 3.17188ZM3.28123 6.78125C2.67803 6.78125 2.18748 6.29059 2.18748 5.6875C2.18748 5.59414 2.19749 5.50275 2.2175 5.41508C2.3246 4.94593 2.84373 5.20629 2.84373 5.6875C2.84373 5.92878 3.04006 6.125 3.28123 6.125C3.52241 6.125 3.71873 5.92878 3.71873 5.6875C3.71873 5.2066 4.2369 4.9468 4.3447 5.41546C4.36489 5.50321 4.37498 5.59451 4.37498 5.6875C4.37498 6.29059 3.88444 6.78125 3.28123 6.78125ZM8.74998 6.78125C8.14678 6.78125 7.65623 6.29059 7.65623 5.6875C7.65623 5.59414 7.66624 5.50275 7.68625 5.41508C7.79334 4.94593 8.31248 5.20629 8.31248 5.6875C8.31248 5.92878 8.50881 6.125 8.74998 6.125C8.99115 6.125 9.18748 5.92878 9.18748 5.6875C9.18748 5.2066 9.70565 4.9468 9.81345 5.41546C9.83364 5.50321 9.84373 5.59451 9.84373 5.6875C9.84373 6.29059 9.35318 6.78125 8.74998 6.78125Z" />
               <path
@@ -313,18 +335,22 @@
         </div>
         <!-- /.card -->
 
-        <div class="card__item">
-          <div class="card__image">
-            <img src="img/cards/pizza-7.png" alt="pizza-7">
+        <div class="card__item" data-tabs-dish="pizza">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/cards/pizza-7.png" alt="pizza-7">
           </div>
-          <div class="card__name">Кватро формаджіо</div>
-          <div class="card__size">32cm</div>
+          <div class="card__title">
+            <div class="card__name">Кватро формаджіо</div>
+            <div class="card__size">32cm</div>
+
+          </div>
+          <!-- /.card__title -->
           <div class="card__ingridients">Dough, Mozzarella, Cheddar, Blue, Parmesan</div>
           <div class="card__price">119 UAH</div>
           <!-- .card__price -->
 
           <div class="card__basket">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="card__basket-image" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.2653 3.81981C11.261 3.76283 11.2133 3.71875 11.1562 3.71875H9.73436C9.43232 3.71875 9.18748 3.47391 9.18748 3.17188C9.18748 1.42286 7.76451 0 6.01561 0C4.2667 0 2.84373 1.42286 2.84373 3.17188C2.84373 3.47391 2.59889 3.71875 2.29686 3.71875H0.874985C0.817891 3.71875 0.770204 3.76283 0.765938 3.81981L0.000313585 13.8823C-0.00198329 13.9126 0.00840733 13.9426 0.0291886 13.9649C0.0498604 13.9873 0.0789541 14 0.10936 14H11.9219C11.9523 14 11.9814 13.9873 12.002 13.965C12.0227 13.9427 12.0332 13.9127 12.0309 13.8824L11.2653 3.81981ZM3.71873 3.17188C3.71873 1.90542 4.74905 0.875 6.01561 0.875C7.28217 0.875 8.31248 1.90542 8.31248 3.17188C8.31248 3.47391 8.06764 3.71875 7.76561 3.71875H4.26561C3.96358 3.71875 3.71873 3.47391 3.71873 3.17188ZM3.28123 6.78125C2.67803 6.78125 2.18748 6.29059 2.18748 5.6875C2.18748 5.59414 2.19749 5.50275 2.2175 5.41508C2.3246 4.94593 2.84373 5.20629 2.84373 5.6875C2.84373 5.92878 3.04006 6.125 3.28123 6.125C3.52241 6.125 3.71873 5.92878 3.71873 5.6875C3.71873 5.2066 4.2369 4.9468 4.3447 5.41546C4.36489 5.50321 4.37498 5.59451 4.37498 5.6875C4.37498 6.29059 3.88444 6.78125 3.28123 6.78125ZM8.74998 6.78125C8.14678 6.78125 7.65623 6.29059 7.65623 5.6875C7.65623 5.59414 7.66624 5.50275 7.68625 5.41508C7.79334 4.94593 8.31248 5.20629 8.31248 5.6875C8.31248 5.92878 8.50881 6.125 8.74998 6.125C8.99115 6.125 9.18748 5.92878 9.18748 5.6875C9.18748 5.2066 9.70565 4.9468 9.81345 5.41546C9.83364 5.50321 9.84373 5.59451 9.84373 5.6875C9.84373 6.29059 9.35318 6.78125 8.74998 6.78125Z" />
               <path
@@ -349,18 +375,22 @@
         </div>
         <!-- /.card -->
 
-        <div class="card__item">
-          <div class="card__image">
-            <img src="img/cards/pizza-8.png" alt="pizza-8">
+        <div class="card__item" data-tabs-dish="pizza">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/cards/pizza-8.png" alt="pizza-8">
           </div>
-          <div class="card__name">Кватро формаджіо</div>
-          <div class="card__size">32cm</div>
+          <div class="card__title">
+            <div class="card__name">Кватро формаджіо</div>
+            <div class="card__size">32cm</div>
+
+          </div>
+          <!-- /.card__title -->
           <div class="card__ingridients">Dough, mozzarella, barrel, eggs, Parmesan cheese</div>
           <div class="card__price">119 UAH</div>
           <!-- .card__price -->
 
           <div class="card__basket">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="card__basket-image" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.2653 3.81981C11.261 3.76283 11.2133 3.71875 11.1562 3.71875H9.73436C9.43232 3.71875 9.18748 3.47391 9.18748 3.17188C9.18748 1.42286 7.76451 0 6.01561 0C4.2667 0 2.84373 1.42286 2.84373 3.17188C2.84373 3.47391 2.59889 3.71875 2.29686 3.71875H0.874985C0.817891 3.71875 0.770204 3.76283 0.765938 3.81981L0.000313585 13.8823C-0.00198329 13.9126 0.00840733 13.9426 0.0291886 13.9649C0.0498604 13.9873 0.0789541 14 0.10936 14H11.9219C11.9523 14 11.9814 13.9873 12.002 13.965C12.0227 13.9427 12.0332 13.9127 12.0309 13.8824L11.2653 3.81981ZM3.71873 3.17188C3.71873 1.90542 4.74905 0.875 6.01561 0.875C7.28217 0.875 8.31248 1.90542 8.31248 3.17188C8.31248 3.47391 8.06764 3.71875 7.76561 3.71875H4.26561C3.96358 3.71875 3.71873 3.47391 3.71873 3.17188ZM3.28123 6.78125C2.67803 6.78125 2.18748 6.29059 2.18748 5.6875C2.18748 5.59414 2.19749 5.50275 2.2175 5.41508C2.3246 4.94593 2.84373 5.20629 2.84373 5.6875C2.84373 5.92878 3.04006 6.125 3.28123 6.125C3.52241 6.125 3.71873 5.92878 3.71873 5.6875C3.71873 5.2066 4.2369 4.9468 4.3447 5.41546C4.36489 5.50321 4.37498 5.59451 4.37498 5.6875C4.37498 6.29059 3.88444 6.78125 3.28123 6.78125ZM8.74998 6.78125C8.14678 6.78125 7.65623 6.29059 7.65623 5.6875C7.65623 5.59414 7.66624 5.50275 7.68625 5.41508C7.79334 4.94593 8.31248 5.20629 8.31248 5.6875C8.31248 5.92878 8.50881 6.125 8.74998 6.125C8.99115 6.125 9.18748 5.92878 9.18748 5.6875C9.18748 5.2066 9.70565 4.9468 9.81345 5.41546C9.83364 5.50321 9.84373 5.59451 9.84373 5.6875C9.84373 6.29059 9.35318 6.78125 8.74998 6.78125Z" />
               <path
@@ -402,15 +432,15 @@
 
     <div class="gallery__wrapper">
       <div class="gallery__link">
-        <p>Instagram: <a href="#" target="_blank">@classic_kovel</a></p>
+        <p class="gallery__link-item">Instagram: <a class="gallery__link-name" href="#" target="_blank">@classic_kovel</a></p>
       </div>
       <!-- /.gallery__link -->
-      <div class="gallery__image"><img src="img/gallery-1.png" alt="image1"></div>
-      <div class="gallery__image"><img src="img/gallery-1.png" alt="image1"></div>
-      <div class="gallery__image"><img src="img/gallery-2.png" alt="image2"></div>
-      <div class="gallery__image"><img src="img/gallery-3.png" alt="image3"></div>
-      <div class="gallery__image"><img src="img/gallery-4.png" alt="image4"></div>
-      <div class="gallery__image"><img src="img/gallery-5.png" alt="image5"></div>
+      <div class="gallery__image"><img src="img/gallery-1.png" class="gallery__image-item" alt="image1"></div>
+      <div class="gallery__image"><img src="img/gallery-1.png" class="gallery__image-item" alt="image1"></div>
+      <div class="gallery__image"><img src="img/gallery-2.png" class="gallery__image-item" alt="image2"></div>
+      <div class="gallery__image"><img src="img/gallery-3.png" class="gallery__image-item" alt="image3"></div>
+      <div class="gallery__image"><img src="img/gallery-4.png" class="gallery__image-item" alt="image4"></div>
+      <div class="gallery__image"><img src="img/gallery-5.png" class="gallery__image-item"  alt="image5"></div>
 
     </div>
     <!-- /.gallery__wrapper -->
@@ -423,7 +453,7 @@
       <input type="text" id="youname" name="youname" placeholder="Your name">
       <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
       <button type="submit" class="button">Сall back
-        <img src="img/button-image.svg" alt="image">
+        <img class="button__image" src="img/button-image.svg" alt="image">
       </button>
     </form>
     <div class="form__image-wrapper">
@@ -434,7 +464,7 @@
 
 
     </div>
-    <div data-speed="70" class="layer image-7"><img src="img/delivery.png" alt="car"></div>
+    <div data-speed="70" class="layer image-7"><img class="image__delivery" src="img/delivery.png" alt="car"></div>
 
   </div>
   <!-- /.form -->
